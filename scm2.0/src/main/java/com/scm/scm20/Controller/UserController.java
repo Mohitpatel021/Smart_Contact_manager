@@ -1,8 +1,8 @@
 package com.scm.scm20.Controller;
 
-import com.scm.scm20.Helper.Helper;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -18,9 +18,7 @@ public class UserController {
   }
 
   @RequestMapping(value = "/profile")
-  public String userProfile(Authentication authentication) {
-    String username = Helper.getEmailOfLoggedInUser(authentication);
-    System.out.println(username);
+  public String userProfile(Model model, Authentication authentication) {
     return "user/profile";
   }
 }
