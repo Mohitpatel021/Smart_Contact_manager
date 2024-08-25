@@ -1,0 +1,45 @@
+------->You have to install the NPM Module. So Just use the command------------>
+
+      {"npm install"}
+
+----->If the above won't work use another command which is forcefully install all the required depandency---------->
+
+      {"npm install --force"}
+
+---------> If you Want to use tailwind in Any page of your Project Just run this command <--------------
+
+   {"npx tailwindcss -i src/main/resources/static/CSS/input.css -o src/main/resources/static/css/output.css --watch"}
+
+----->Include Output.css file in Your HTML File like this:-
+
+   {"<link rel="stylesheet" data-th-href="@{'/CSS/output.css'}">"}
+
+------> If Your want to Use FlowBite Component So you need to add Css and JavaScript Using CDN <--------
+
+   {" <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.css" rel="stylesheet" />"}
+
+----------->This the FlowBite JavaScript which is used in the Base File<----------
+
+   {" <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>"}
+
+------>This is how you can navigate using URl in thymleaf------>
+
+   <ul>
+      <li>
+         <a data-th-href="@{'/home'}">Home</a>
+       </li>
+       <li><a data-th-href="@{'/services'}">Service</a></li>
+      <li><a data-th-href="@{'/about'}">About</a></li>
+   </ul>
+
+<----------------- SETTING UP THE OAUTH2  LOGIN FUNCTIONALITY------------->
+1. Add OAUTH2 Client starter  depandency
+2.if Login using Google then->
+("If we are using google login so we need the below thing like client ID and Client secret 
+ for using the google login and same for other login as well like github and facebook")
+   "Note-: for Client Id and Client Secret We have to go to the google cloud console and have to create for google login"
+         a. Client Id
+         b. Client Secret
+3. Add the OAUTH login Configuration
+4.Login Page /login and successHandler
+5. In you SuccessHandler you are getting data.....Save kar skty hai data based on the provider information
